@@ -6,8 +6,6 @@ export async function load({ params }: { params: { id2: string, id: string } }) 
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
-            'Origin': 'http://localhost:5173',
-            'X-Requested-With': 'XMLHttpRequest'
         }
     });
     const data = await res.json();
