@@ -4,8 +4,6 @@
 	import Katex from '$lib/Katex.svelte';
 	export let data;
 
-	console.log(data);
-
 	let sanitizedContent = '';
 
 	function sanitizeContent(content: any) {
@@ -75,8 +73,4 @@
 		<div>{@html sanitizedContent}</div>
 	</div>
 {:else}
-	<div class="flex h-full flex-col bg-zinc-950 text-white">
-		<h1 class="py-8 text-center text-3xl font-semibold">{data.title}</h1>
-		<p class="text-center">Loading...</p>
-	</div>
 {/if}

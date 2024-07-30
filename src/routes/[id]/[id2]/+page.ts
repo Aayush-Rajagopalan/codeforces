@@ -2,7 +2,7 @@ import { error } from '@sveltejs/kit';
 /** @type {import('./$types').PageLoad} */
 
 export async function load({ params }: { params: { id2: string, id: string } }) {
-    const res = await fetch(`https://cors-anywhere.herokuapp.com/https://latte.cf.aayus.me/${params.id}/${params.id2}`,{
+    const res = await fetch(`https://latte.cf.aayus.me/${params.id}/${params.id2}`,{
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
