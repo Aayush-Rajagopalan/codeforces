@@ -10,6 +10,6 @@ export async function load({ params }: { params: { id2: string, id: string } }) 
     });
     const data = await res.json();
     if (res.ok)
-        return { title: data.title, content: data.content };
+        return { title: data.title, content: data.content, id: data.id, id2: data.id2 };
     error(404, 'Not found');
 }

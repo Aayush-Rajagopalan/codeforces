@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	/** @type {import('./$types').PageData} */
-	import Katex from '$lib/Katex.svelte';
+	import Inline from '$lib/inline.svelte';
 	export let data;
 
 	let sanitizedContent = '';
@@ -68,9 +68,14 @@
 </script>
 
 {#if sanitizedContent}
-	<div class="flex h-full flex-col bg-zinc-950 text-white">
+	<div class="flex px-4 h-full flex-col bg-zinc-950 text-white">
 		<h1 class="py-8 text-center text-3xl font-semibold">{data.title}</h1>
-		<div>{@html sanitizedContent}</div>
+		<div><Inline content={sanitizedContent} /></div>
+		<div
+			class="mt-8 flex w-full min-w-[30%] max-w-4xl items-center justify-between px-4 md:px-0 text-zinc-400"
+		>
+			<a href="https://codeforces.com/problemset/problem/{data.id}/{data.id2}">view in codeforces</a>
+			<a href="https://codeforces.com/problemset/submit">submit</a>
+		</div>
 	</div>
-{:else}
 {/if}
