@@ -1,0 +1,29 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #09090b;
+}
+
+p {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.title, .section-title {
+    font-weight: 700;
+}
+
+.section-title {
+    padding-top: 2rem;
+    font-size: 1.6rem;
+}
+
+.sample-test {
+    margin-top: 1rem;
+    background-color: #18181b;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
